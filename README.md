@@ -1,5 +1,8 @@
 # Random Images App
 
+# link to the video recording of the app 
+https://drive.google.com/file/d/1uJNg2_iVHbVnihjJQ-PZjTZkH5-8RcBA/view?usp=sharing
+
 A production-ready Flutter application demonstrating **Clean Architecture** principles with comprehensive testing and offline-first capabilities.
 
 ## Features
