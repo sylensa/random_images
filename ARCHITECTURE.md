@@ -265,17 +265,7 @@ class ServerFailure extends Failure {}
 class TimeoutFailure extends Failure {}
 ```
 
-## Key Improvements from Previous Architecture
-
-### Before (Violations):
-❌ Model contained Flutter `Color` type
-❌ Cubit extracted colors (UI concern)
-❌ Direct instantiation: `RandomImageRepo randomImageRepo = RandomImageRepo()`
-❌ Repository returned nullable without error info
-❌ No abstractions between layers
-❌ States didn't extend Equatable
-
-### After (Clean Architecture):
+## (Clean Architecture):
 ✅ Domain entities are framework-agnostic
 ✅ Color extraction in presentation layer
 ✅ Dependency injection throughout
@@ -343,15 +333,5 @@ HomeScreen → RandomImageCubit → RandomImageRepository → RemoteDataSource �
 4. **Independence**: Business logic independent of frameworks
 5. **Flexibility**: Easy to swap implementations (e.g., switch from HTTP to GraphQL)
 
-## Next Steps for Scaling
-
-1. Add use cases layer between Cubit and Repository
-2. Implement `get_it` or `injectable` for DI
-3. Add unit/integration tests
-4. Implement local caching (add local data source)
-5. Add data transformation use cases
-6. Implement repository pattern for other features
-
----
 
 **Note:** For small projects, this might seem like over-engineering. However, as the app grows, this architecture ensures maintainability and testability at scale.
